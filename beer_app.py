@@ -17,8 +17,6 @@ def get_param():
     
     beer_type = beer_type.replace("_", " ")
     
-    beer_type = beer_type.title()
-    
     beers = pd.read_csv('beer_joined_v0.1.csv')
     
     beers_filt = beers.query("style_name == @beer_type")
